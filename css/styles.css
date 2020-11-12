@@ -10,10 +10,15 @@
   border: 0;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
+  width: 80px;
 }
 
 #mainNav .navbar-toggler-icon {
   width: .875em;
+  color: #fff;
+}
+
+#content-menu > li > .nav-link {
   color: #fff;
 }
 

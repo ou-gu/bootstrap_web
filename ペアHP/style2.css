@@ -1,0 +1,43 @@
+
+.page-section {
+    padding: 7rem 0;
+}
+
+section {
+    display: block;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+.card img{
+	width: 344px;
+	height: 200px;
+}
+
+
+.card-body{
+	height: 190px;
+}
+
+
+.col-md-4{
+	margin-top: 30px;
+}
+
+
+@media (min-width: 992px){
+	.card img{
+	width: 348px;
+	height: 200px;
+}
+}
+
+
+
+
+
+
+

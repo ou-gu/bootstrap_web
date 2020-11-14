@@ -17,22 +17,23 @@
   color: #fff;
 }
 
-header.masthead {
-  padding-top: 10.5rem;
-  padding-bottom: 6rem;
+.carousel-inner img {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
   text-align: center;
   color: #fff;
-  background-image: url(../img/download.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  position: relative;
+  display: inline-block;
 }
 
 .masthead-subheading {
- font-size: 1.5rem;
- font-style: italic;
- line-height: 1.5rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
 
 }
 
@@ -47,4 +48,32 @@ header.masthead {
   padding: 1.25rem 2.5rem;
   font-size: 1.125rem;
   font-weight: 700;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.bg-text {
+  font: italic;
+  position: absolute; 
+  bottom: 100px;
+  width: 100%;
+  padding: 30px;
+  color: #fff;
+  background: rgba(0, 0, 0, .6);
+}
+
+.bg-text > h1 {
+  margin: 0;
+  font-size: 150%;
+  text-align: center;
+}
+
+
+
+#target {
+  width: 550px;
+  height: 250px;
+  margin: 100px auto;
 }

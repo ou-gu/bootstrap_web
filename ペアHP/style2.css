@@ -1,4 +1,17 @@
 
+
+.backgrond-color{
+	background-color: rgb(46, 44, 44);
+}
+
+h4{
+	color: blanchedalmond;
+}
+
+.section-heading{
+	padding-top: 30px;
+}
+
 .page-section {
     padding: 7rem 0;
 }
@@ -13,8 +26,8 @@ section {
 
 
 .card img{
-	width: 344px;
 	height: 200px;
+	padding-right: 1px;
 }
 
 
@@ -27,12 +40,63 @@ section {
 	margin-top: 30px;
 }
 
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	background-color: #343839;
+	color: aliceblue;
+	margin-top:50px;
+	height: 350px;
+}
+
+
+.form .name {
+	margin-bottom: 20px;
+}
+
+.form .email {
+	margin-bottom: 20px;
+}
+
+
+#sendMessageButton{
+	margin-top: 20px;
+}
+
+
+input.name,.email,.inquiry{
+	width: 300px;
+}
+
+
+.Copyright{
+	color: white;
+	text-align: center;
+	margin-bottom: 0px;
+}
+
 
 @media (min-width: 992px){
 	.card img{
-	width: 348px;
+	width: 289px;
 	height: 200px;
 }
+
+.contact{
+	display: flex;
+	justify-content: center;
+}
+
+input.name,.email,.inquiry{
+	width: 400px;
+}
+
+.card-body{
+	height: 215px;
+}
+
 }
 
 

@@ -70,8 +70,39 @@
   text-align: center;
 }
 
+.img-hidden > img {
+  width: 300px;
+  height: auto;
+}
+.container-m {
+  margin-top: 80px;
+}
+
 #target {
   width: 550px;
   height: 250px;
   margin: 100px auto;
 }
+
+.thumbnails {
+  display: flex;
+  margin-top: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.thumbnails img {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnails li {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.thumbnails li:hover,
+.thumbnails li.current {
+  opacity: 1;
+}
+

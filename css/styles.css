@@ -55,7 +55,7 @@
 }
 
 .bg-text {
-  font: italic;
+  font-style: italic;
   position: absolute; 
   bottom: 100px;
   width: 100%;
@@ -106,3 +106,35 @@
   opacity: 1;
 }
 
+#contact {
+  background-color: rgb(240, 232, 232);
+  margin-bottom: 10px;
+}
+
+#contact .section-subheading {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+#contact .text-center {
+  margin-bottom: 15px;
+}
+
+.form-group-textarea {
+  height: 100%;
+}
+
+#message {
+  min-height: 150px;
+}
+
+#sendMessageButton {
+  background-color: #fed136;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+footer {
+  text-align: center;
+}

@@ -8,109 +8,55 @@ const curryImages = [
   'img/curry/curry-04.jpg'
 ];
 
-let currentIndex = 0;
-//   mainのIdを取得して画像の表示
-const mainImage = document.getElementById('curryImg');
-mainImage.src =curryImages[currentIndex]
-// const mainImage = mainImg;
-mainImage.src = curryImages[currentIndex];
-//   imgのIdを取得した,thumbnailsにliの子要素を追加する
-curryImages.forEach((image, index) => {
-  const img = document.createElement('img');
-  img.src = image;
-  
-  const li = document.createElement('li');
-  // 表示されている画像にcurrentクラスを付けてる
-  if (index === currentIndex) {
-    li.classList.add('current');
-  }
-  // 今あるcurrentクラスを外して、クリックした画像に追加する
-  li.addEventListener('click', () => {
-    mainImage.src = image;
-    const thumbnails = document.querySelectorAll('.thumbnails > li');
-    thumbnails[currentIndex].classList.remove('current');
-    currentIndex = index;
-    thumbnails[currentIndex].classList.add('current');
+const chickenImages = [
+  'img/chicken/chicken-01.jpg',
+  'img/chicken/chicken-02.jpg',
+  'img/chicken/chicken-03.jpg'
+];
+const pizzaImages = [
+  'img/pizza/pizza-01.jpg',
+  'img/pizza/pizza-02.jpg',
+  'img/pizza/pizza-03.jpg'
+];
+
+thumbnailChanger(curryImages,'curryImg');
+thumbnailChanger(chickenImages,'chickenImg');
+thumbnailChanger(pizzaImages,'pizzaImg');
+
+function thumbnailChanger(images,target_name){
+
+  let currentIndex = 0;
+  //   mainのIdを取得して画像の表示
+  const mainImage = document.getElementById(target_name);
+  mainImage.src =images[currentIndex]
+  // const mainImage = mainImg;
+  mainImage.src = images[currentIndex];
+  //   imgのIdを取得した,thumbnailsにliの子要素を追加する
+  images.forEach((image, index) => {
+    const img = document.createElement('img');
+    img.src = image;
+    
+    const li = document.createElement('li');
+    // 表示されている画像にcurrentクラスを付けてる
+    if (index === currentIndex) {
+      li.classList.add('current');
+    }
+    // 今あるcurrentクラスを外して、クリックした画像に追加する
+    li.addEventListener('click', () => {
+      mainImage.src = image;
+      const thumbnails = document.querySelectorAll('.'+ target_name +'.thumbnails > li');
+      thumbnails[currentIndex].classList.remove('current');
+      currentIndex = index;
+      thumbnails[currentIndex].classList.add('current');
+    });
+    
+    li.appendChild(img);
+    document.querySelector('.'+ target_name +'.thumbnails').appendChild(li);
+    li.classList.add('col-4')
   });
-  
-  li.appendChild(img);
-  document.querySelector('.thumbnails').appendChild(li);
-  li.classList.add('col-4')
-});
 
-// cc's chicken
-// const cheickenImages = [
-//   'img/chicken/chicken-01.jpg',
-//   'img/chicken/chicken-02.jpg',
-//   'img/chicken/chicken-03.jpg'
-// ];
+}
 
-// let Index = 0;
-// //   mainのIdを取得して画像の表示
-// const mainImage = document.getElementById('chickenImg');
-// mainImage.src = cheickenImages[currentIndex]
-// // const mainImage = mainImg;
-// mainImage.src = cheickenImages[currentIndex];
-// //   imgのIdを取得した,thumbnailsにliの子要素を追加する
-// cheickenImages.forEach((image, index) => {
-//   const img = document.createElement('img');
-//   img.src = image;
-  
-//   const li = document.createElement('li');
-//   // 表示されている画像にcurrentクラスを付けてる
-//   if (index === currentIndex) {
-//     li.classList.add('current');
-//   }
-//   // 今あるcurrentクラスを外して、クリックした画像に追加する
-//   li.addEventListener('click', () => {
-//     mainImage.src = image;
-//     const thumbnails = document.querySelectorAll('.thumbnails > li');
-//     thumbnails[currentIndex].classList.remove('current');
-//     currentIndex = index;
-//     thumbnails[currentIndex].classList.add('current');
-//   });
-  
-//   li.appendChild(img);
-//   document.querySelector('.thumbnails').appendChild(li);
-//   li.classList.add('col-4')
-// });
-
-
-// const curryImages = [
-//   'img/curry/curry-02.jpg',
-//   'img/curry/curry-03.jpg',
-//   'img/curry/curry-04.jpg'
-// ];
-
-// let currentIndex = 0;
-// //   mainのIdを取得して画像の表示
-// const mainImage = document.getElementById('curryImg');
-// mainImage.src =curryImages[currentIndex]
-// // const mainImage = mainImg;
-// mainImage.src = curryImages[currentIndex];
-// //   imgのIdを取得した,thumbnailsにliの子要素を追加する
-// curryImages.forEach((image, index) => {
-//   const img = document.createElement('img');
-//   img.src = image;
-
-//   const li = document.createElement('li');
-//   // 表示されている画像にcurrentクラスを付けてる
-//   if (index === currentIndex) {
-//     li.classList.add('current');
-//   }
-//   // 今あるcurrentクラスを外して、クリックした画像に追加する
-//   li.addEventListener('click', () => {
-//     mainImage.src = image;
-//     const thumbnails = document.querySelectorAll('.thumbnails > li');
-//     thumbnails[currentIndex].classList.remove('current');
-//     currentIndex = index;
-//     thumbnails[currentIndex].classList.add('current');
-//   });
-
-//   li.appendChild(img);
-//   document.querySelector('.thumbnails').appendChild(li);
-//   li.classList.add('col-4')
-// });
 
 
 
